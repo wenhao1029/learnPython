@@ -45,16 +45,16 @@
 # #print(L[10:10]) # return error because index incorrect. start number must be lower than stop number.
 
 # #Check if a list is empty
-# L2 = []
-# # if(L2):
-	# # print("It's not an empty list!")
-# # else:
-	# # print("It's an empty list!")
-	
-# if(len(L2)):  #another way to check if a list is empty.
+L2 = []
+# if(L2):
 	# print("It's not an empty list!")
 # else:
 	# print("It's an empty list!")
+	
+if(len(L2)):  #another way to check if a list is empty.
+	print("It's not an empty list!")
+else:
+	print("It's an empty list!")
 
 	
 	
