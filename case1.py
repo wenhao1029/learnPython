@@ -20,7 +20,7 @@
 # people = ['Toby','Lucy']
 # print(people)
 
-# # people = 1  #python 变量类型可随时改变
+# # people = 1  #python 变量类型可随时改变, 那之前分配的内存怎么释放呢？（用来存储list的）
 # # print(people)	
 
 # people.append('Gege') #追加元素
