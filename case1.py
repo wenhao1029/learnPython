@@ -16,7 +16,7 @@
 # else: 
 	# print(-a)
 	
-##list和tuple使用
+# ##list和tuple使用
 # people = ['Toby','Lucy']
 # print(people)
 
@@ -26,15 +26,15 @@
 # people.append('Gege') #追加元素
 # print(people)
 
-# people.pop(1)     #删除元素
+# people.pop(1)     #删除元素1,Index from 0
 # print(people)
 
-# people[1]='Lucy'  #修改元素值
+# people[1]='Lucy2'  #修改元素值
 # print(people)
 
 # print(len(people))#number of elements in list.
 
-##slice of list.
+#slice of list.
 # L = list(range(100)) # list() is similar with construction fucntion of C++.
 # print(L)
 # print(L[0:10]) #slice
@@ -42,28 +42,26 @@
 # print(L[-10:-1])# index -1 means the last element in the list. -2 means the last second element...
 # print(L[-10:]) 
 # print(L[:]) #exactly same as L
-# #print(L[10:10]) # return error because index incorrect. start number must be lower than stop number.
+#print(L[10:10]) # return error because index incorrect. start number must be lower than stop number.
 
 # #Check if a list is empty
-L2 = []
+# L2 = []
 # if(L2):
 	# print("It's not an empty list!")
 # else:
 	# print("It's an empty list!")
 	
-if(len(L2)):  #another way to check if a list is empty.
-	print("It's not an empty list!")
-else:
-	print("It's an empty list!")
-
-	
+# if(len(L2)):  #another way to check if a list is empty.
+	# print("It's not an empty list!")
+# else:
+	# print("It's an empty list!")
 	
 # Copy list
 # La = ['a', 'b', 'c']
-# Lb = La
+# Lb = La #Not really a copy for content. Like a pointer.
 # La.append('d')
 # print('La is: ' , La)
-# print('Lb is: ' , Lb)  #Lb actually refer to the same list as La. So here Lb is not a new list.
+# print('Lb is: ' , Lb)  #Lb actually refers to the same list as La. So here Lb is not a new list.
 
 # Lb = La[:]
 # La.append('e')
@@ -79,10 +77,10 @@ else:
 
 
 
-##slice of tuple. tuple is also a kind of list, that can't be changed.
+##slice of tuple. tuple is also a kind of list, which can't be changed.
 # t = tuple(range(100))
 # print(t)
-# #t[1]=3 tuple doesn't support item assignment.
+# # t[1]=3 #Error,tuple doesn't support item assignment.
 # print(t[1]) #but an item in a tuple can be read.
 # print(t[:10])
 
@@ -105,14 +103,18 @@ else:
 	# print(name)
 	
 # sum = 0
-# for x in range(0,102,2): # range(N)返回list = [0,1,...,N-1]
+# for x in range(0,102,2): # range(N)返回list = [0,1,...,N-1], range(start,end,interval) returns a Int List, starting from start, ending before end, with interval.
     # sum = sum + x
     # print(x)
 	
 # print(sum)
-# print(range(101))
-# print(range(0,101,2))
+# print(range(101)) #Cannot print a list directly??
+# print(list(range(101))) # This is OK
+# print(range(0,101,2)) #Cannot print a list directly??
+# print(list(range(0,101,2))) # This is OK
 
+# ListA = ["a",2]
+# print(ListA)
 
 # sum = 0
 # n = 99
@@ -152,8 +154,11 @@ else:
 	# print(i)  #will print b, c, a.
 
 
-##set
-# s=set([1,2,3])
+##set, set represented by {}.
+# s=set([1,2,3]) # consruct a set with a list.
+# print(s)
+# print(s[0]) #Error, set doesn't support indexing.
+# s=set((3,2,1)) #Error, not ok to cunstrct a set with a touple?? strange!
 # print(s)
 
 # s1 = set([1])
@@ -171,7 +176,7 @@ else:
 	# else:
 		# return -x
 		
-# print(abs(0))
+# print(abs(-12))
 		
 # def add_end(L=[]):
 	# L.append('END')
@@ -210,7 +215,7 @@ else:
 
 # A function with key word yield is a special function. It's actually a generator.
 # When calling this function, it will not be executed actually.
-# But calling next() or use for loop to iterate it, the function will be executed and stop in the yield statement.
+# But calling next() or using for loop to iterate it, the function will be executed and stop in the yield statement.
 # def odd():    # A function with yield statement.
 	# print("step1")
 	# yield 1
